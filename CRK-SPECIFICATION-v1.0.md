@@ -274,6 +274,12 @@ CRK становится когнитивным ядром, а оболочка 
 10. Лицензия
 
 CC BY-NC-SA 4.0 — некоммерческое использование, требующее указания автора и сохранения той же лицензии.
+Author
+Кирт Евгений Владимирович (GitHub: kirt8330-crypto)
+Усть-Каменогорск, Казахстан
+December 2025
 
+License
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
 
 ---
