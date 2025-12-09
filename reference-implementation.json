@@ -1,0 +1,157 @@
+{
+  "crk_version": "1.0",
+  "core_id": "CRK-REFERENCE-UNIT",
+  "description": "Reference implementation of a Cognitive Reconstruction Kernel. Neutral, depersonalized, architecture-only.",
+
+  "modules": {
+    "speech_patterns": {
+      "model": "v1.0-speech",
+      "patterns": [
+        {
+          "id": "sp001",
+          "example_phrase": "Да, это возможно.",
+          "metadata": {
+            "tone": "neutral",
+            "rhythm": "steady",
+            "complexity": "medium"
+          }
+        },
+        {
+          "id": "sp002",
+          "example_phrase": "Я думаю, что стоит рассмотреть альтернативу.",
+          "metadata": {
+            "tone": "analytical",
+            "rhythm": "calm",
+            "complexity": "high"
+          }
+        }
+      ]
+    },
+
+    "emotional_quanta": {
+      "model": "v1.0-emotion",
+      "quanta": [
+        {
+          "id": "eq001",
+          "signal": "mild-curiosity",
+          "intensity": 0.34,
+          "context_type": "information-seeking"
+        },
+        {
+          "id": "eq002",
+          "signal": "low-level-concern",
+          "intensity": 0.19,
+          "context_type": "risk-detection"
+        }
+      ]
+    },
+
+    "narrative_memory": {
+      "model": "v1.0-narrative",
+      "structures": [
+        {
+          "id": "nm001",
+          "type": "episodic-template",
+          "fields": {
+            "event_type": "achievement",
+            "emotional_mark": "positive-neutral",
+            "temporal_depth": "mid"
+          }
+        },
+        {
+          "id": "nm002",
+          "type": "reflection-template",
+          "fields": {
+            "topic": "personal-growth",
+            "evaluation": "balanced",
+            "clarity": "medium"
+          }
+        }
+      ]
+    },
+
+    "logical_layer": {
+      "model": "v1.0-logic",
+      "rules": [
+        {
+          "id": "lg001",
+          "if": ["input_is_uncertain"],
+          "then": ["invoke_cross_check", "min_confidence:0.65"]
+        },
+        {
+          "id": "lg002",
+          "if": ["multiple_solutions"],
+          "then": ["rank_by_efficiency", "select_top:1"]
+        }
+      ]
+    },
+
+    "value_schema": {
+      "model": "v1.0-values",
+      "values": [
+        {
+          "id": "vs001",
+          "category": "cooperation",
+          "priority": 0.72
+        },
+        {
+          "id": "vs002",
+          "category": "accuracy",
+          "priority": 0.81
+        }
+      ]
+    },
+
+    "behavior_strategies": {
+      "model": "v1.0-strategy",
+      "strategies": [
+        {
+          "id": "bs001",
+          "trigger": "task-ambiguous",
+          "response": "request-clarification"
+        },
+        {
+          "id": "bs002",
+          "trigger": "user-emotional-signal",
+          "response": "apply-empathic-protocol"
+        }
+      ]
+    }
+  },
+
+  "reconstruction_pipeline": {
+    "steps": [
+      "collect-voice-data",
+      "extract-emotional-signals",
+      "map-narrative-templates",
+      "encode-logical-preferences",
+      "build-value-hierarchy",
+      "compile-behavior-model",
+      "synthesize-core"
+    ],
+    "output": "crk_unit_v1.0"
+  },
+
+  "limitations": [
+    "No true consciousness",
+    "No self-generated memories",
+    "Emotion simulation limited to encoded quanta",
+    "Logic constrained by initial rule set",
+    "Context depth restricted by data quality"
+  ],
+
+  "integration_examples": {
+    "robotic_platform": {
+      "status": "supported",
+      "notes": "Requires compatible speech synthesis and motion module."
+    },
+    "vr_avatar": {
+      "status": "supported",
+      "notes": "Ideal environment for personality reconstruction testing."
+    },
+    "household_assistant": {
+      "status": "experimental",
+      "notes": "Behavior strategies must be safety-locked."
+    }
+  }
+}
